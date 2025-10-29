@@ -1,4 +1,6 @@
 import csv
+
+
 books=[]
 with open("F:/编程作业/books-en.csv",encoding="latin-1")as file:
     reader=csv.DictReader(file,delimiter=';')
@@ -12,4 +14,5 @@ with open("F:/编程作业/books-en.csv",encoding="latin-1")as file:
 books_sorted=sorted(books,key=lambda x: x['download'], reverse=True)
 books20th = books_sorted[:20]
 for i,book in enumerate(books20th, 1):
+
     print(book["title"],book["author"],book["download"])
